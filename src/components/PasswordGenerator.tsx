@@ -75,7 +75,7 @@ export default function PasswordGenerator() {
         <h1 className="text-amber-50 text-lg font-semibold text-center mb-4">
           Password Generator
         </h1>
-        <div className="bg-gray-800 p-4 rounded flex justify-between items-center">
+        <div className="bg-gray-800 p-4  flex justify-between items-center">
           <span className="text-xl font-mono text-amber-50">
             {password || "Click Generate"}
           </span>
@@ -96,7 +96,7 @@ export default function PasswordGenerator() {
             </svg>
           </button>
         </div>
-        <div className="bg-gray-900 text-white p-6 rounded-xl w-96 mx-auto mt-10 shadow-lg">
+        <div className="bg-gray-900 text-white p-6  w-96 mx-auto mt-10 shadow-lg">
           <div className="mt-4">
             <label className="flex justify-between text-sm">
               Character Length: <span>{length}</span>
@@ -144,7 +144,7 @@ export default function PasswordGenerator() {
             </div>
           </div>
           <button
-            className="mt-6 bg-green-300 text-gray-900 font-semibold py-2 px-4 rounded w-full"
+            className=" cursor-pointer mt-6 bg-green-300 text-gray-900 font-semibold py-2 px-4 rounded w-full hover:border-1 hover:border-solid hover:border-[#A4FFAF] hover:bg-[#18171F] hover:text-[#A4FFAF]"
             onClick={handleGenerate}
           >
             Generate ➝
