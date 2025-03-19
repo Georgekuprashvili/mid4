@@ -23,7 +23,7 @@ export const Slider: React.FC<SliderProps> = ({
       step={step}
       value={value[0]}
       onChange={(e) => onValueChange([Number(e.target.value)])}
-      className="w-full cursor-pointer "
+      className="w-full cursor-pointer accent-emerald-300 "
     />
   );
 };
