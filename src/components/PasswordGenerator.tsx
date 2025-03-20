@@ -68,6 +68,7 @@ export default function PasswordGenerator() {
   };
 
   const strength = getStrength();
+  const [copied, setCopied] = useState(false);
 
   return (
     <>
@@ -79,7 +80,16 @@ export default function PasswordGenerator() {
           <span className="text-xl font-mono text-amber-50">
             {password || "Click Generate"}
           </span>
-          <button className="cursor-pointer group" onClick={handleCopy}>
+          {copied && (
+            <p className="text-[#A4FFAF] ml-[50px] font-mono">COPIED</p>
+          )}
+          <button
+            className="cursor-pointer group"
+            onClick={() => {
+              handleCopy();
+              setCopied(true);
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
@@ -145,7 +155,10 @@ export default function PasswordGenerator() {
           </div>
           <button
             className=" cursor-pointer mt-6 bg-green-300 text-gray-900 font-semibold py-2 px-4 rounded w-full hover:border-1 hover:border-solid hover:border-[#A4FFAF] hover:bg-[#18171F] hover:text-[#A4FFAF]"
-            onClick={handleGenerate}
+            onClick={() => {
+              handleGenerate();
+              setCopied(false);
+            }}
           >
             Generate ➝
           </button>
